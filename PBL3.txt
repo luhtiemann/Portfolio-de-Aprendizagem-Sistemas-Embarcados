@@ -1,0 +1,59 @@
+PBL3 - Sistemas Embarcados e comunicação 
+
+Objetivo: O objetivo desta atividade é o estudo de sistemas embarcados e comunicação entre dispositivos para o auxílio do trabalho final.  
+
+ O que deve ser entregue/apresentado? 
+
+-O Portifólio de Aprendizagem individual do aluno; 
+
+-Uma atividade extra, voltada para o nosso ambiente de estudo (restaurante).    
+
+Portfólio de Aprendizagem 
+
+Seguindo o que foi realizado no PBL1 e 2, deve ser realizado o portifólio onde deve conter todos os exercícios realizados. Os exercícios estão presentes nas apresentações:”IoT- Conceitos e aplicações.pdf” e “Aula02-IoT-Socket-MQTT.pdf” e são eles: 
+
+1) Crie um semáforo com 3 LEDs no Arduino;  
+
+2) Faça o código para ler dados de temperatura e humidade do sensor DTH22; 
+
+3) Leia o dado do sensor de temperatura, e faça com que o servo motor fique 3 segundos na posição referente a temperatura, e 3 segundos na posição referente a humidade; 
+
+4) Em dupla, ou em equipe, dependendo da quantidade de nodeMU disponível, desenvolver uma aplicação cliente em um 
+
+nodeMCU, e outra servidor em outro nodeMCU, e então realizar um bate papo; 
+
+5) Ler e enviar informações do ESP32 pelo MQTT, onde as informações são referentes a um LED. Deve utilizar os seguintes tópicos: 
+
+NomeDoAluno/infoLED; 
+/NomeDoAluno/comando; 
+6) Faça um código em Python para ler o dado do LED e realizar o 
+
+comando: 
+
+O LED deve permanecer ativo por 5 segundos e apagado por 10 segundos; 
+Você deve verificar se o LED está aceso/apagado antes de enviar o comando; 
+ 
+
+Atividade referente a aplicação restaurante.  
+
+Deve ser desenvolvido a comunicação entre o ESP32 e o Python, com a finalidade de coletar dados de sensores, e enviar informações para atuadores.  
+
+Utilize como base o projeto no wokwi, pois possui a biblioteca “PubSubClient” implementada: 
+
+https://wokwi.com/projects/316434364352168512 
+Temas: 
+
+temas-1.pdfDownload temas-1.pdf
+
+ Descrição: 
+
+1)Imagine uma cozinha, onde será ativado um ventilador quando a temperatura for superior a 35 graus. Deve ver lido a temperatura do sensor de temperatura, enviado pelo ESP32 e recebido no Python via MQTT. Deve ser enviado informação do código Python para o ESP32 para controlar um servomotor. O servomotor deve girar de 0 a 180 graus quando a temperatura for maior que 35 graus; 
+
+2) Imagine uma cozinha, onde está ocorrendo um incendio. Deve ser monitorado a temperatura e enviado para um servidor (código Python) via MQTT, caso a temperatura seja maior que 50 graus, deve ser acionado um aviso sonoro (Buzzir), o comando deve vir do servidor também via MQTT.;
+
+3)Vamos fazer um alarme de segurança para a nossa cozinha. Deve ser coletado os dados de distância de um sensor HC-SR04, enviado para o Python por um tópico MQTT. Caso a distância esteja entre 30 e 100 centimetros, deve ser acionado um aviso sonoro, por um Buzzir, que deve receber o comando por um segundo tópico MQTT; 
+
+4)Vamos fazer uma porta inteligente controlada por MQTT: Leia a informaçaõ de distância de um sensor HC-SR04 e envie para o Python por MQTT. A partir destas informações, abra e feche a porta, que será um servomotor. Se a distância for menor que 50, o servo deve atuar em 90 graus. Maior que 90 deve ser zero. Deve possuir um tópico especifico para o servomotor; 
+
+5)Pode escolher entre o projeto 2 ou 4. 
+
